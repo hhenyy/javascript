@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window 객체</title>
+<script>
+  function winopen(){
+	  //open("팝업창에 실행될 문서명","윈도우 이름","옵션");
+	  //변수 w1,w2에 선언자 var를 붙이면 지역변수가되어 winopen(){}에서만 사용가능
+	  //선언자가 없어서 전역변수로 사용가능.
+	  w1=window.open("date01.html","mywin01","width=200,height=400");
+	  w2=window.open("claculator.html","mywin02","width=200,height=400");
+  }	
+  function winclose(){
+	  w1.close();  //창이 여러개인 경우 1개의 창을 변수로 저장해준후 실행하면 해당 창이 닫힘.
+      w2.close();  //변수로 저장해주지않으면 해당창 닫기 실행을 할수없음.
+  }	
+</script>
+  
+</head>
+<body>
+	
+<input type="button" value="창열기" onClick="winopen()">
+<input type="button" value="창닫기" onClick="winclose()">
+
+</body>
+</html>

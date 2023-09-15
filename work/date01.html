@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+</head>
+<body>
+
+<script>
+	//현재 연,월,일,시,분,초,요일을 구하는 프로그램을 작성하세요?
+	
+	var t=new Date();//Date객체 생성
+	document.write(t); //Tue Sep 12 2023 10:28:15 GMT+0900 (한국 표준시)
+	
+	var y = t.getFullYear(); //4자리 연도
+	document.write(y); //2023
+
+    var m = t.getMonth()+1;  // 월(0~11): 실제 사용 월과 일치하려면 +1
+    document.write(m); //9 (+1하지않으면 8로 나옴)
+     
+    var d = t.getDate(); //일
+    document.write(d+"<br>"); //12
+    
+    var h = t.getHours(); //시간
+    var mm = t.getMinutes(); //분
+    var s = t.getSeconds(); //초
+   
+    var w = t.getDay(); //요일(0~6) 
+    var week = ['일','월','화','수','목','금','토'];
+    //0(일),1(월),2(화),3(수),4(목),5(금),6(토)
+    document.write(w+"<br>"); //w=2 
+    document.write(week[2]+"<br>"); //wee[2]=화
+    document.write(week[w]+"<br>"); //wee[w]=화
+    
+    document.write(y+"-"+m+"-"+d+" "+h+":"+mm+":",+s);//답: 2023-9-12 10:41:42
+</script>
+
+</body>
+</html>

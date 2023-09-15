@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus, blur 이벤트</title>
+</head>
+<body>
+	<form>
+		아이디: <input type="text" id="id" value="아이디 입력"
+		  onFocus="id_focus()" onBlur="id_blur()"><br> <!--focus이벤트시 id_focus()호출-->
+		비밀번호: <input type="text" id="passwd" value="비밀번호 입력"
+		onFocus="passwd_focus()" onBlur="passwd_blur()"><br>
+	</form>
+	<script>
+		var id= document.getElementById("id"); //id값이 id인 element를 불러와 변수id에 저장
+		var passwd= document.getElementById("passwd");
+		function id_focus(){  //focus이벤트 호출 , 함수명은 id_focus
+		   id.value=""; // 호출시 id 값을 지움 (""이라서)//""값(null값)을 id value값으로 저장.
+		}
+	    function id_blur(){  //blur이벤트 호출
+	       id.value=id.defaultValue; //id값의 value값을 초기값으로
+	                          //defaultValue: 텍스트입력상자에 입력된 초기값
+		}
+		function passwd_focus(){ //focus이벤트
+			passwd.value=""; 
+		}
+		function passwd_blur(){ //blur이벤트
+			passwd.value=passwd.defaultValue;
+		}
+	</script>
+
+</body>
+</html>

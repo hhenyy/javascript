@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script>
+	//이벤트 연결
+	window.onload=function(){
+		//문서 객체 선택
+		//h1선택자(태그)를 모두 구해온다.
+		//querySelectorAll('h1')는 h1 선택자(태그)를 모두 구해와서 배열로 리턴해준다.
+		//h1태그를 배열변수 headers에 저장
+		var headers= document.querySelectorAll('h1');
+		
+		for(var i=0; i<headers.length;i++){
+			var header = headers[i]; //headers[0],[1],[2]..를 header변수에 저장
+			
+			header.style.color='orange';
+			header.style.background='red';
+			header.innerHTML="자바스크립트";
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+	<h1>Header</h1>
+
+</body>
+</html>

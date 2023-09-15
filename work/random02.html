@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<!--Date객체를 이용해서 배경색변경 버튼을 클릭하면, 1초에 한번씩 배경색이
+변경되는 프로그램을 작성하세요 ?-->
+<script>
+	var c=['blue','pink','green','gray','skyblue','black'];
+	function change(){
+//		var t=new Date();
+	//	var s=t.getSeconds();//초
+	//	var na=s%6; //나머지:0~5
+		
+		var d= Math.floor(Math.random()*6);
+		document.bgColor=c[d]; //배경색 설정
+		w=setTimeout("change()",1000);//1초에 한번씩 change()함수 호출
+	}
+	
+	function stop() {
+		clearTimeout(w);//setTimeout()로 실행한 명령 취소시킴.
+	}
+	
+</script>
+
+</head>
+<body>
+	<h3>화면색이 바뀌네요.</h3>
+	<input type="button" value="배경색 변경" onClick="change()">
+	<input type="button" value="중지" onClick="stop()">
+</body>
+</html>

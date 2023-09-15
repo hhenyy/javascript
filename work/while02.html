@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>while문</title>
+</head>
+<body>
+	
+<script>
+	//while문을 이용해서 구구단(2~9)을 출력하는 프로그램을 작성하세요?
+	
+	var dan=2;   //i변수를 여기서 선언하면 초기화 문제가 발생해서 2단만 출력될수있음.(i=10에서 1로 초기화 되지않기 때문에)
+	while(dan<=9){
+		document.write("["+dan+"단]<br>");
+		var i=1;
+		while(i<=9){
+		document.write(dan+"*"+i+"="+dan*i+"<br>");
+	    i++; 
+	}
+	dan++;
+	document.write("<br>");
+	}
+	
+</script>
+
+</body>
+</html>

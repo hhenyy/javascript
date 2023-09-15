@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>매개변수가 있는 함수</title>
+</head>
+<body>
+
+<script>
+	//confirm()함수
+	//1.confirm()함수는 사용자에게 중요한 결정을 물어볼떄 주로 사용한다.
+	//2.확인버튼을 클릭하면 true값을 리턴한다.
+	//3.취소 버튼을 클릭하면 false값을 리턴한다.
+	
+	
+	//매개변수가 있는 함수
+	function ask(question){    //ask() 함수정의
+		var result = confirm(question); //확인시 true값 리턴,취소시 false리턴
+		if(result){ 
+			return "찬성";     //result값에 따라 return값을 돌려줌.
+		}else{
+			return "반대";
+		}
+	}
+	
+</script>
+
+</body>
+<script>
+	var result = ask("찬성하면 확인 버튼, 반대하면 취소버튼을 클릭하세요?");//result값을 받음.
+	
+	alert(result); //result값을 받아서 메시지박스로 실행
+</script>
+</html>

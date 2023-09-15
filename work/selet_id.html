@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+ <script>
+	 //이벤트를 연결합니다.
+	 window.onload=function(){
+		 //문서 객체를 선택합니다.
+		 //id가 header인 태그(element)를 구해온다.
+		 //<h1>태그를 header변수에 저장시킴.
+		 var header=document.getElementById('header');
+		 
+		 //문서 객체를 조작합니다.
+		 //변수명(header).style.속성
+		 header.style.color='orange';   //글자색  
+		 header.style.background='red'; //배경색
+		 
+		 //innerHTML(태그내부를 의미하는 속성)
+		 //h1태그 안의 값을 '자바스크립트'를 삽입
+		 header.innerHTML='자바 스크립트'; //배경색   
+	 }
+ </script>
+
+</head>
+<body>
+ <h1 id="header">Header</h1>  <!--<h1>태그의 id값을 header로 설정.-->
+
+</body>
+</html>

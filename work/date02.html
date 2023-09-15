@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<style>
+	#mytime {border : white}; /*테두리가 보이지 않게됨.*/
+	
+</style>
+
+<!--현재 시간을 웹 브라우저에 1초에 1번씩 출력하는 디지털 시계 프로그램을 
+작성하세요 ?-->
+<script>
+function show(){  //함수정의 (년,월,일,시,분,초를 구하는 show())
+	var t = new Date(); //date객체 t생성
+	var y = t.getFullYear();
+	var m = t.getMonth()+1;
+	var d = t.getDate();
+	var h = t.getHours();
+	var mi = t.getMinutes();
+	var s = t.getSeconds();
+	
+	var time=y+"-"+m+"-"+d+" "+h+":"+mi+":"+s//년월일시분초를 time변수로 저장
+	
+	document.getElementById('mytime').value=time;
+	//id값(mytime)을 가진 태그( <input type="text" id="mytime">)를 불러와서 .value로 값설정
+	
+	w=setTimeout("show()",1000); //1초에 한번씩 show()함수를 호출
+	                    //2000으로 설정시 2초에 한번씩 나타남.
+	                   //clearTimeout(w)를 쓰기위해 변수이름 w설정.
+	                   //변수이름은 임의로 설정,선언자가 없으면 전역변수임.
+	                   //선언자를 var를 붙이면 지역변수가 되어 show()안에서만 사용가능하여 clearTimeout()에서 사용불가.
+}
+function stop(){
+	clearTimeout(w);//setTimeout() 에 의해서 실행한 명령을 취소시켜주는 함수
+	//setTimeout() 값이 여러개 일수있어 변수로 받아서 처리해야 실행가능
+	
+}
+		
+</script>
+</head>
+
+<body onLoad="show()"> <!--load 이벤트: 해당 페이지가 로딩되었을때(처음읽힐때)-->
+현재시간 : <input type="text" id="mytime"><br><br> 
+<!--자바스크립트 id값:  input태그를 여러개만드는데 구분하기위함.-->
+
+<input type="button" value="start" onClick="show()"> <!--click이벤트로 함수호출-->
+<input type="button" value="stop"onClick="stop()">
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt 함수</title>
+</head>
+<body>
+<!-- prompt()
+사용자로 부터 키보드로 입력을 받을때 사용하는 함수
+형식 : prompt('메시지?','초기값')
+-->
+<script>
+	var name= prompt("이름을 입력하세요?","");//초기값을 5로 쓰면 실행창에 5가 나타남.
+	document.write("당신의 이름은 "+name+"<br>");
+	document.write(typeof(name)+"<br>");  //string (숫자입력해도 문자로 나옴)
+</script>
+
+<script>
+	var age= prompt("나이를 입력하세요?","");//age="25";
+	alert(typeof(age));  //string (숫자를 입력해도 문자로 나옴)
+	
+	if(age>20){       //자바스크립트에서는 자료형을 쓰지않기 떄문에 문자형이지만 숫자랑 비교가됨.
+		alert("당신은 성인 입니다");
+	}else{
+		alert("당신은 미성년자 입니다");
+	}
+</script>
+
+</body>
+</html>

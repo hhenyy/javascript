@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch ~ case문</title>
+</head>
+<body>
+<script>
+//switch ~ case문
+//키보드로 0~100점 사이의 점수를 입력 받아서 학점을 출력하는 프로그램 작성
+
+//문자형으로 처리되어 정상실행되지않아 Number()로 prompt()를 감싸서 숫자형변환 해준다.
+//변환하지않으면 default처리되어 F학점이 나온다.
+//pareInt()를 사용하면 Number()쓰지않아도됨.
+//s=95
+  var s = Number(prompt("0~100점 사이의 점수를 입력하세요?",""));
+  
+  //paseInt("9.5") --> 9:문자를 정수형으로 변환해주는 함수
+  switch(parseInt(s/10)){
+	  case 10:   // break문 없으면 아래내용으로 실행됨.
+	  case 90 : alert("A학점");
+	          break;
+	  case 80 : alert("B학점");
+	          break;
+	  case 70 : alert("C학점");
+	          break;
+	  case 60 : alert("D학점");
+	          break;
+	  default: alert("F학점");
+  }
+</script>
+
+</body>
+</html>

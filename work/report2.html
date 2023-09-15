@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+ <script>
+    function show(add){
+      var number = document.getElementById('number');    
+       number.value = number.value + add;
+    } 
+    function show2(){
+      number.value = eval(number.value);
+                                          
+    }  
+     function show3(){  //
+      number.value="";
+    }
+     function show4(){  //
+      number.value=Math.sqrt(number.value); //id 가 number값인곳으로 출력..
+     
+    }
+
+    
+ </script>
+
+</head>
+<body>
+<table border="1"  align="center">
+   <tr>
+      <td colspan="4">
+         <input type="text" id="number">
+      </td>
+   </tr>
+   <tr align="center">
+      <td><input type="button" value=" 7 " onClick="show(7)"></td>
+      <td><input type="button" value=" 8 " onClick="show(8)"></td>
+      <td><input type="button" value=" 9 " onClick="show(9)"></td>
+      <td><input type="button" value=" / " onClick="show('/')"></td>
+   </tr>
+   <tr align="center">
+      <td><input type="button" value=" 4 " onClick="show(4)"></td>
+      <td><input type="button" value=" 5 " onClick="show(5)"></td>
+      <td><input type="button" value=" 6 " onClick="show(6)"></td>
+      <td><input type="button" value=" * " onClick="show('*')"></td>
+   </tr>
+   <tr align="center">
+      <td><input type="button" value=" 1 " onClick="show(1)"></td>
+      <td><input type="button" value=" 2 " onClick="show(2)"></td>
+      <td><input type="button" value=" 3 " onClick="show(3)"></td>
+      <td><input type="button" value=" - " onClick="show('-')"></td>
+   </tr>
+   <tr align="center">
+      <td><input type="button" value=" 0 " onClick="show(0)"></td>
+      <td><input type="button" value=" . " onClick="show('.')"></td>
+      <td><input type="button" value=" sqrt " onClick="show4()"></td>
+      <td><input type="button" value=" + " onClick="show('+')"></td>
+   </tr>
+   <tr align="center">
+      <td colspan="2"><input type="button" value="=" onClick="show2()"></td>
+      <td colspan="2"><input type="button" value="Clear" onClick="show3()"></td>
+   </tr>
+      
+   
+</table>
+</body>
+</html>

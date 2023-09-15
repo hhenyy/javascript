@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열의 메소드</title>
+</head>
+<body>
+<script>
+	var num = ['사당','교대','방배','강남'];
+	document.write(num+"<br>"); //사당,교대,방배,강남
+	document.write(typeof(num)+"<br>"); //obfect
+	
+	// join(): 문자('-')를 기준으로 배열 값들을 하나의 문자 데이터로 결합
+	document.write(num.join('-')+"<br>"); //사당-교대-방배-강남(결합되어 한개의 문자로 처리)
+	document.write(typeof(num.join('-'))+"<br>"); //string
+	
+	//reverse(): 배열 원소 값들의 순서를 반대로 바꿔어 주는 함수
+	//           원본 배열의 순서가 반대로 바뀐다.
+	document.write(num.reverse()+"<br>"); //강남,방배,교대,사당
+	document.write(num+"<br>");           //강남,방배,교대,사당(원본배열의 순서도 바껴있음)
+	
+	//sort(): 배열 원소값들을 오름차순으로 정렬(문자:사전순 정렬)해주는 함수
+    //        원본 배열의 원소들이 오름차순으로 정렬되어 있다.
+	document.write(num.sort()+"<br>"); //강남,교대,방배,사당
+    document.write(num+"<br>");        //강남,교대,방배,사당(원본배열의 순서도 바껴있음)
+    
+    //.sort().reverse(): 배열 원소 값들을 내림차순 정렬 (문자: 사전역순 정렬)
+    document.write(num.sort().reverse()+"<br>");  //사당,방배,교대,강남
+    document.write(num+"<br>");            //사당,방배,교대,강남(원본배열의 순서도 바껴있음)
+
+    
+</script>
+
+</body>
+</html>

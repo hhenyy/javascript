@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script>
+	//load이벤트 연결
+	window.onload=function(){
+		//문서객체 선택(querySelector)
+		//h1 태그(선택자)를 구해온다.  (선택자중 태그선택자가 있음.)
+		//querySelector('h1')는 첫번째 h1 선택자(태그)만 구해온다.
+		//구해온 태그 h1을 header변수에 저장
+		//동일한 태그가 여러개여도 첫번째 태그(선택자)만 불러옴.
+		var header =document.querySelector('h1');	
+		
+		//문서 객체 조작
+		header.style.color='orange';
+		header.style.background='red';
+		header.innerHTML='자바스크립트';
+	}
+	
+</script>
+</head>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+	<h1>Header</h1>
+
+</body>
+</html>

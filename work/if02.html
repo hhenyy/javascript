@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if else</title>
+</head>
+<body>
+<script>
+	//if ~else문
+	//키보드로 입력 받은 숫자가 짝수인지, 홀수인지 판별하는 프로그램을 작성하세요.
+	
+	//Number()로 감싸면 키보드입력값 문자를 숫자로 변환해서 의미가 더명확해짐.(변환하지않아도 산술가능하지만)
+	var num=Number(prompt("당신이 좋아하는 숫자는?","0")); 
+	alert(typeof(num));  //string
+	
+	if(num%2==0){  //짝수 //문자형이어도 산술연산이 가능한경우
+		alert("당신이 좋아하는 숫자는 짝수");
+	}else{        //홀수
+		alert("당신이 좋아하는 숫자는 홀수");
+	}
+</script>
+</body>
+</html>
